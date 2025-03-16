@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -24,3 +24,39 @@
   <p>Two popups should have opened automatically.</p>
 </body>
 </html>
+ -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Example</title>
+  <script>
+    function openPopups() {
+      alert("Please ensure popups are enabled in your browser for this feature to work!");
+      // Attempt to open popup windows
+      const popup1 = window.open("https://www.wikipedia.org/", "Popup1", "width=600,height=400");
+      const popup2 = window.open("https://www.youtube.com/", "Popup2", "width=600,height=400");
+
+      // Notify the user if popups are blocked
+      if (!popup1 || popup1.closed || !popup2 || popup2.closed) {
+        alert("Popups were blocked! Please enable them in your browser settings.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Popup Example</h1>
+  <button onclick="openPopups()">Open Popups</button>
+</body>
+</html>
+
