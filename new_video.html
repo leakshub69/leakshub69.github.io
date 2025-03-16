@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirect Example</title>
+  <title>Popup Example</title>
   <script>
-    // This function runs when the page loads
+    // Function to open popup windows
     window.onload = function () {
-      // Automatically redirect to the first link
-      window.location.href = "https://leakshub69.github.io/test.html"; // Change this to your desired link
-    };
+      // URLs to open in popup windows
+      const popup1 = "https://www.wikipedia.org/"; // Replace with your desired URL
+      const popup2 = "https://www.youtube.com/"; // Replace with your desired URL
 
-    // Modify the behavior of the back button
-    window.onpopstate = function () {
-      // Redirect to another link if the back button is pressed
-      window.location.href = "https://leakshub69.github.io/test1.html"; // Change this to your desired link
-    };
+      // Open the first popup window
+      window.open(popup1, "Popup1", "width=600,height=400");
 
-    // Push state to manipulate browser history
-    window.history.pushState(null, null, window.location.href);
+      // Open the second popup window
+      window.open(popup2, "Popup2", "width=600,height=400");
+    };
   </script>
 </head>
 <body>
-  <h1>Redirecting...</h1>
+  <h1>Welcome to the Main Site</h1>
+  <p>Two popups should have opened automatically.</p>
 </body>
 </html>
